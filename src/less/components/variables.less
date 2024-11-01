@@ -38,21 +38,21 @@
 // Typography
 //
 
-@global-font-family:                            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-@global-font-size:                              16px;
-@global-line-height:                            1.5;      // 24px
+@global-font-family:                            'Raleway Variable', sans-serif;
+@global-font-size:                              2rem; // See variables.less for base font size
+@global-line-height:                            1.5;
 
-@global-2xlarge-font-size:                      2.625rem; // 42px
-@global-xlarge-font-size:                       2rem;     // 32px
-@global-large-font-size:                        1.5rem;   // 24px
-@global-medium-font-size:                       1.25rem;  // 20px
-@global-small-font-size:                        0.875rem; // 14px
+@global-2xlarge-font-size:                      9rem;
+@global-xlarge-font-size:                       6.7rem;
+@global-large-font-size:                        5rem;
+@global-medium-font-size:                       3.7rem;
+@global-small-font-size:                        0.6rem;
 
 //
 // Colors
 //
 
-@global-color:                                  #666;
+@global-color:                                  #484848;
 @global-emphasis-color:                         #333;
 @global-muted-color:                            #999;
 
@@ -65,10 +65,10 @@
 // Backgrounds
 //
 
-@global-background:                             #fff;
+@global-background:                             #FCF9FF;
 
 @global-muted-background:                       #f8f8f8;
-@global-primary-background:                     #1e87f0;
+@global-primary-background:                     #2D073A;
 @global-secondary-background:                   #222;
 
 @global-success-background:                     #32d296;
@@ -96,25 +96,25 @@
 //
 
 // Used in margin, section, list
-@global-margin:                                 20px;
-@global-small-margin:                           10px;
-@global-medium-margin:                          40px;
-@global-large-margin:                           70px;
-@global-xlarge-margin:                          140px;
+@global-margin:                                 3.2rem;
+@global-small-margin:                           1.6rem;
+@global-medium-margin:                          6.4rem;
+@global-large-margin:                           9.6rem;
+@global-xlarge-margin:                          12.8rem;
 
 // Used in grid, column, container, align, card, padding
-@global-gutter:                                 30px;
-@global-small-gutter:                           15px;
-@global-medium-gutter:                          40px;
-@global-large-gutter:                           70px;
+@global-gutter:                                 @global-margin;
+@global-small-gutter:                           @global-small-margin;
+@global-medium-gutter:                          @global-medium-margin;
+@global-large-gutter:                           @global-large-margin;
 
 //
 // Controls
 //
 
-@global-control-height:                         40px;
-@global-control-small-height:                   30px;
-@global-control-large-height:                   55px;
+@global-control-height:                         5.4rem;
+@global-control-small-height:                   @global-medium-margin;
+@global-control-large-height:                   @global-large-margin;
 
 //
 // Z-index

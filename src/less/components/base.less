@@ -14,7 +14,7 @@
 @base-body-background:                          @global-background;
 @base-body-font-family:                         @global-font-family;
 @base-body-font-weight:                         normal;
-@base-body-font-size:                           @global-font-size;
+@base-body-font-size:                           10px;
 @base-body-line-height:                         @global-line-height;
 @base-body-color:                               @global-color;
 
@@ -38,7 +38,7 @@
 @base-margin-vertical:                          @global-margin;
 
 @base-heading-font-family:                      @global-font-family;
-@base-heading-font-weight:                      normal;
+@base-heading-font-weight:                      600;
 @base-heading-color:                            @global-emphasis-color;
 @base-heading-text-transform:                   none;
 @base-heading-margin-top:                       @global-medium-margin;
@@ -83,3 +83,11 @@
 
 @base-selection-background:                     #39f;
 @base-selection-color:                          @global-inverse-color;
+
+.hook-base-body {
+  font-size: @base-body-font-size;
+}
+
+body {
+  font-size: @global-font-size;
+}
