@@ -12,22 +12,76 @@
     <script src="src/js/theme.js" type="module"></script>
   </head>
   <body>
+    <div class="header">
+      <div
+        class="navbar-desktop uk-flex uk-flex-center"
+        uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; offset: 40;"
+      >
+        <nav class="uk-navbar-container uk-flex-1" uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="#"
+              ><img src="public/img/logo.svg" alt="Strategy Sensei"
+            /></a>
+            <ul class="uk-navbar-nav">
+              <li><a href="">Chi sono</a></li>
+              <li><a href="">Analisi & Strategia</a></li>
+              <li>
+                <a href="">Digital Advertising & SEM </a>
+              </li>
+              <li><a href="">Per agenzie</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-right">
+            <div class="uk-navbar-item">
+              <a class="uk-text-primary" href="#"
+                >Prenota una consulenza
+                <img
+                  class="uk-margin-small-left"
+                  src="/public/img/arrow.svg"
+                  uk-svg
+              /></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
     <div class="uk-section hero-section">
       <div class="uk-container uk-text-center">
-        <h1>
-          Strategie <img src="public/img/bulb.png" alt="" width="90" /> digitali
-          su misura per il tuo successo
-          <img src="public/img/rocket.png" alt="" width="90" />
-        </h1>
-        <p class="uk-text-large">
-          Ottieni risultati concreti con soluzioni digitali efficaci.
-        </p>
-        <div class="uk-margin-large-top">
-          <a class="uk-button uk-button-default" href="#"
-            >Prenota la tua consulenza</a
-          >
+        <div
+          class="uk-flex uk-flex-column uk-flex-between"
+          uk-height-viewport="offset-bottom: 30"
+        >
+          <div>
+            <h1>
+              Strategie
+              <img src="public/img/bulb.png" alt="" width="90" /> digitali su
+              misura per il tuo successo
+              <img src="public/img/rocket.png" alt="" width="90" />
+            </h1>
+            <p class="uk-text-large">
+              Ottieni risultati concreti con soluzioni digitali efficaci.
+            </p>
+            <div class="uk-margin-large-top">
+              <a class="uk-button uk-button-default" href="#"
+                >Prenota la tua consulenza</a
+              >
+            </div>
+          </div>
+          <div class="uk-margin-xlarge-top">
+            <div class="uk-text-large uk-flex-center" uk-grid>
+              <div>Analisi & Strategia</div>
+              <div class="uk-flex uk-flex-middle"><div class="dot"></div></div>
+              <div>Digital Advertising & SEM</div>
+              <div class="uk-flex uk-flex-middle"><div class="dot"></div></div>
+              <div>Web Agency Selection</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div uk-height-viewport=""></div>
   </body>
 </html>

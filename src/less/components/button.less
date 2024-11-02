@@ -34,12 +34,17 @@
 @button-small-padding-horizontal:               @global-small-gutter;
 @button-large-padding-horizontal:               @global-medium-gutter;
 
-@button-default-background:                     @global-muted-background;
-@button-default-color:                          @global-emphasis-color;
-@button-default-hover-background:               darken(@button-default-background, 5%);
-@button-default-hover-color:                    @global-emphasis-color;
-@button-default-active-background:              darken(@button-default-background, 10%);
-@button-default-active-color:                   @global-emphasis-color;
+@button-border-radius:                          62px;
+@button-text-transform:                         none;
+@button-font-weight:                            500;
+@button-transition:                             0.2s;
+
+@button-default-background:                     @global-emphasis-color;
+@button-default-color:                          @global-inverse-color;
+@button-default-hover-background:               lighten(@button-default-background, 15%);
+@button-default-hover-color:                    @button-default-color;
+@button-default-active-background:              @button-default-hover-background;
+@button-default-active-color:                   @button-default-hover-color;
 
 @button-primary-background:                     @global-primary-background;
 @button-primary-color:                          @global-inverse-color;
@@ -75,3 +80,10 @@
 @button-link-hover-color:                       @global-muted-color;
 @button-link-hover-text-decoration:             none;
 @button-link-disabled-color:                    @global-muted-color;
+
+.hook-button {
+  border-radius: @button-border-radius;
+  text-transform: @button-text-transform;
+  font-weight: @button-font-weight;
+  transition: @button-transition;
+}

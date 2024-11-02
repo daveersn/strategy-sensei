@@ -34,24 +34,32 @@
 // Variables
 // ========================================================================
 
-@navbar-background:                             @global-muted-background;
-@navbar-gap:                                    0px; // Must have a unit because of `calc`
+@navbar-background:                             rgba(255, 255, 255, 0.75);
+@navbar-gap:                                    3.2rem; // Must have a unit because of `calc`
+@navbar-gap-m:                                  6.4rem;
 @navbar-color-mode:                             dark;
 
-@navbar-nav-gap:                                0px; // Must have a unit because of `calc`
+@navbar-nav-gap:                                1.6rem; // Must have a unit because of `calc`
+@navbar-nav-gap-m:                              3.2rem;
 
-@navbar-nav-item-height:                        80px;
-@navbar-nav-item-padding-horizontal:            15px;
-@navbar-nav-item-color:                         @global-muted-color;
-@navbar-nav-item-font-size:                     @global-font-size;
+@navbar-border-radius:                          1.6rem;
+@navbar-container-width:                        @container-max-width;
+@navbar-box-shadow:                             0 4px 4px 0 rgba(0, 0, 0, 0.03);
+@navbar-backdrop-filter:                        blur(30px);
+
+@navbar-nav-item-height:                        9.6rem;
+@navbar-nav-item-padding-horizontal:            0;
+@navbar-nav-item-color:                         @global-emphasis-color;
+@navbar-nav-item-font-size:                     @base-small-font-size;
 @navbar-nav-item-font-family:                   @global-font-family;
-@navbar-nav-item-hover-color:                   @global-color;
+@navbar-nav-item-hover-color:                   @text-primary-color;
 @navbar-nav-item-onclick-color:                 @global-emphasis-color;
-@navbar-nav-item-active-color:                  @global-emphasis-color;
+@navbar-nav-item-active-color:                  @text-primary-color;
+@navbar-nav-item-text-transform:                none;
 
 @navbar-parent-icon-margin-left:                4px;
 
-@navbar-item-padding-horizontal:                15px;
+@navbar-item-padding-horizontal:                3.2rem;
 @navbar-item-color:                             @global-color;
 
 @navbar-toggle-color:                           @global-muted-color;
@@ -107,3 +115,11 @@
 @inverse-navbar-item-color:                    @inverse-global-color;
 @inverse-navbar-toggle-color:                  @inverse-global-muted-color;
 @inverse-navbar-toggle-hover-color:            @inverse-global-color;
+
+.hook-navbar-container {
+  border-radius: @navbar-border-radius;
+  max-width: @navbar-container-width;
+  box-shadow: @navbar-box-shadow;
+  backdrop-filter: @navbar-backdrop-filter;
+  -webkit-backdrop-filter: @navbar-backdrop-filter;
+}
