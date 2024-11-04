@@ -36,7 +36,8 @@
 @tile-xlarge-padding-vertical:                 @global-xlarge-margin;
 @tile-xlarge-padding-vertical-m:               (@global-large-margin + @global-xlarge-margin);
 
-@tile-default-background:                      @global-background;
+@tile-default-background:                      #fff;
+@tile-default-border:                          0.1rem solid #ECECEC;
 @tile-default-color-mode:                      dark;
 
 @tile-muted-background:                        @global-muted-background;
@@ -47,3 +48,7 @@
 
 @tile-secondary-background:                    @global-secondary-background;
 @tile-secondary-color-mode:                    light;
+
+.hook-tile-default {
+  border: @tile-default-border;
+}

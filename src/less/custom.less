@@ -1,6 +1,6 @@
 .hero-section {
   h1 {
-    max-width: 120rem;
+    max-width: 122rem;
 
   }
 
@@ -17,8 +17,61 @@
   .navbar-desktop {
     .uk-navbar-right a {
       text-decoration: none;
-      font-size: 2rem;
       font-weight: 600;
     }
+  }
+}
+
+#servizi-offerti {
+  h2 {
+    max-width: 116rem;
+  }
+
+  .uk-card {
+    border: 0.1rem solid #e7e7e7;
+    text-decoration: none;
+    transition: 0.3s;
+    min-height: 41rem;
+
+    h4 {
+      font-size: 2.2rem;
+    }
+
+    svg {
+      rect {
+        transition: 0.3s;
+        fill: @text-primary-color;
+      }
+
+      path {
+        transition: 0.3s;
+        fill: transparent;
+      }
+    }
+
+    &:hover {
+      color: @global-inverse-color;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+      border-color: transparent;
+
+      h4 {
+        color: @global-inverse-color;
+      }
+
+      svg {
+        rect {
+          fill: @global-inverse-color;
+        }
+        path {
+          stroke: @text-primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 11px;
   }
 }
