@@ -28,6 +28,12 @@
   z-index: 1;
 }
 
+.negative-margin-bottom-section {
+  margin-bottom: -@section-padding-vertical-m;
+  position: relative;
+  z-index: 1;
+}
+
 #servizi-offerti {
   position: relative;
   z-index: 2;
@@ -142,8 +148,62 @@
   }
 }
 
+#reviews {
+  border-radius: 5rem 5rem 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.mail-button {
+  color: @base-heading-color;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  transition: 0.3s;
+
+  &:before {
+    content: "";
+    z-index: 1;
+    transition: 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 0.4rem;
+    background-color: @text-primary-color;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  svg path {
+    fill: none;
+  }
+
+  .link-text-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    &:before {
+      height: 100%;
+    }
+  }
+}
+
+.social-grid a {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @section-primary-background;
+}
+
 @media screen and (min-width: 1920px) {
   html {
-    //font-size: 11px;
+    font-size: 11px;
   }
 }
