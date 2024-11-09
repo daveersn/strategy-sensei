@@ -8,6 +8,9 @@ export default class InfiniteTextSlider {
 
   _init() {
     this.container.innerHTML =
-      this.container.innerHTML + this.container.innerHTML;
+      this.container.innerHTML +
+      this.container.innerHTML +
+      this.container.innerHTML +
+      this.container.innerHTML;
   }
 }
