@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@fontsource-variable/raleway": "^5.1.0",
+    "lenis": "^1.1.16",
     "uikit": "^3.21.13"
   }
 }
