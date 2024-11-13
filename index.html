@@ -165,6 +165,7 @@
         <div
           class="uk-margin-xlarge-top uk-child-width-1-4@m uk-grid-medium"
           uk-grid
+          uk-scrollspy="target: .uk-card; cls: uk-animation-slide-bottom-small; delay: 250"
         >
           <div>
             <a
@@ -295,6 +296,7 @@
         <div
           class="service-tile uk-border-rounded uk-overflow-hidden analisi-strategia-tile"
           id="analisi-e-strategia"
+          uk-scrollspy="cls: uk-animation-slide-bottom-small;"
         >
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
@@ -338,6 +340,7 @@
         <div
           class="service-tile uk-border-rounded uk-overflow-hidden digital-adv-sem-tile uk-margin-large-top"
           id="digital-advertising-e-sem"
+          uk-scrollspy="cls: uk-animation-slide-bottom-small;"
         >
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
@@ -380,6 +383,7 @@
         <div
           class="service-tile uk-border-rounded uk-overflow-hidden web-agency-selection-tile uk-margin-large-top"
           id="web-agency-selection"
+          uk-scrollspy="cls: uk-animation-slide-bottom-small;"
         >
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
@@ -423,6 +427,7 @@
         <div
           class="service-tile uk-border-rounded uk-overflow-hidden per-le-agenzie-tile uk-margin-large-top"
           id="per-agenzie"
+          uk-scrollspy="cls: uk-animation-slide-bottom-small;"
         >
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
@@ -483,7 +488,7 @@
 
     <div class="uk-section uk-section-default" id="reviews">
       <div class="uk-container uk-container-small">
-        <div class="reviews-slider" uk-slider="velocity:0.7">
+        <div class="reviews-slider" uk-slider="velocity:0.7; autoplay: true">
           <div uk-grid>
             <div class="uk-width-2-3@m">
               <h2>Dicono di <span class="uk-text-primary">me</span></h2>
@@ -491,38 +496,44 @@
                 <div class="uk-slider-items uk-child-width-1-1">
                   <div class="uk-panel">
                     <p class="review-description uk-text-large uk-margin-small">
-                      Grazie a Dar’ya, abbiamo visto una crescita significativa
-                      nel nostro ROI in pochi mesi. Le sue strategie digitali
-                      hanno davvero trasformato il nostro business!
+                      Darya ha mostrato grande professionalità e attenzione ai
+                      dettagli, offrendo valore aggiunto ad Alfred24. L’analisi
+                      dei competitor è stata eccellente e la sua strategia
+                      innovativa.
                     </p>
-                    <p class="uk-text-bold uk-margin-remove">Luca Rossi</p>
+                    <p class="uk-text-bold uk-margin-remove">Andrea Corrao</p>
+                    <p class="uk-text-small uk-margin-remove">Alfred24</p>
+                  </div>
+
+                  <div class="uk-panel">
+                    <p class="review-description uk-text-large uk-margin-small">
+                      Darya ci ha supportato nello sviluppo del sito,
+                      semplificando SEO, metadati e altri aspetti complessi. È
+                      una garanzia di efficienza ed efficacia!
+                    </p>
+                    <p class="uk-text-bold uk-margin-remove">Chiara Gallana</p>
                     <p class="uk-text-small uk-margin-remove">
-                      CEO di WebGrowth Agency
+                      Abacadabra Productions
                     </p>
                   </div>
 
                   <div class="uk-panel">
                     <p class="review-description uk-text-large uk-margin-small">
-                      Grazie a Dar’ya, abbiamo visto una crescita significativa
-                      nel nostro ROI in pochi mesi. Le sue strategie digitali
-                      hanno davvero trasformato il nostro business!
+                      Darya gestisce la mia ADV su Meta e altri aspetti
+                      strategici del brand. Un concentrato di informazioni,
+                      efficienza e operatività: una vera sicurezza!
                     </p>
-                    <p class="uk-text-bold uk-margin-remove">Luca Rossi</p>
-                    <p class="uk-text-small uk-margin-remove">
-                      CEO di WebGrowth Agency
-                    </p>
+                    <p class="uk-text-bold uk-margin-remove">Aba Chiara</p>
                   </div>
 
                   <div class="uk-panel">
                     <p class="review-description uk-text-large uk-margin-small">
-                      Grazie a Dar’ya, abbiamo visto una crescita significativa
-                      nel nostro ROI in pochi mesi. Le sue strategie digitali
-                      hanno davvero trasformato il nostro business!
+                      Consulenza precisa e appassionata, Darya ha rivoluzionato
+                      l’immagine della mia azienda! Scrupolosa, competente e
+                      organizzata, la sceglierei altre mille volte.
+                      Consigliatissima!
                     </p>
-                    <p class="uk-text-bold uk-margin-remove">Luca Rossi</p>
-                    <p class="uk-text-small uk-margin-remove">
-                      CEO di WebGrowth Agency
-                    </p>
+                    <p class="uk-text-bold uk-margin-remove">Annalisa Manca</p>
                   </div>
                 </div>
               </div>
@@ -541,6 +552,7 @@
                     <a uk-slider-item="0">1</a>
                     <a uk-slider-item="1">2</a>
                     <a uk-slider-item="2">3</a>
+                    <a uk-slider-item="3">4</a>
                   </div>
                 </div>
                 <div class="uk-flex uk-flex-middle">

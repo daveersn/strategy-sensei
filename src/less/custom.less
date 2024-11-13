@@ -167,6 +167,10 @@
 }
 
 .reviews-slider {
+  .review-description {
+    padding-right: 1rem;
+  }
+
   .slider-navigation {
     height: 12rem;
     position: relative;
@@ -178,8 +182,10 @@
       transform: translateX(-50%);
       font-weight: 500;
       color: @base-body-color;
-
+      display: none;
+      
       &.uk-active {
+        display: block;
         top: 50%;
         transform: translate(-50%, -50%);
         font-size: 3.7rem;
@@ -187,10 +193,12 @@
       }
 
       &.previous-item {
+        display: block;
         top: 0;
       }
 
       &.next-item {
+        display: block;
         top: 100%;
         transform:  translate(-50%, -100%);
       }
