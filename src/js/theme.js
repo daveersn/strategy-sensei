@@ -38,18 +38,8 @@ function configureAnchorScroll() {
     let attr = u.attr(e.currentTarget, "href");
 
     let targetElement = u.$(attr);
-    let targetElementPosition = targetElement
-      ? targetElement.getBoundingClientRect()
-      : null;
 
-    let top = targetElement
-      ? targetElementPosition.top +
-        window.scrollY -
-        navbarPosition.top -
-        navbarPosition.height * 2
-      : 0;
-
-    lenis.scrollTo(targetElement, {
+    lenis.scrollTo(targetElement ?? 0, {
       offset: -navbarPosition.top - navbarPosition.height * 2,
     });
   });
