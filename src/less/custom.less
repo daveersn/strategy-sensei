@@ -338,13 +338,37 @@
       width: 75%;
     }
   }
-  
+
   .web-agency-selection-tile .image-container {
     margin-left: 0;
   }
 
   .digital-adv-sem-tile .image-container, .per-le-agenzie-tile .image-container {
     padding-top: 0;
+  }
+
+  .uk-navbar-container {
+    margin: 0 1.6rem;
+  }
+
+  .uk-navbar-container {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05) !important;
+    border: 0.1rem solid rgba(0,0,0,.08);
+  }
+
+  .uk-navbar-toggle+.uk-dropbar {
+    width: 100%;
+    max-width: calc(100% - 3.2rem);
+    left: 0!important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 1.6rem 1.6rem;
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .uk-navbar-container:has(.uk-dropbar.uk-open) {
+    border-radius: 1.6rem 1.6rem 0 0;
+    background: rgba(255, 255, 255, 1);
+
   }
 }
 

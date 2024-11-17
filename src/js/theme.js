@@ -32,18 +32,6 @@ function configureAnchorScroll() {
   const isDesktop = window.matchMedia("(min-width: 960px)");
   let navbarPosition = null;
 
-  u.on(anchors, "click", (e) => {
-    e.preventDefault();
-
-    let attr = u.attr(e.currentTarget, "href");
-
-    let targetElement = u.$(attr);
-
-    lenis.scrollTo(targetElement ?? 0, {
-      offset: -navbarPosition.top - navbarPosition.height * 2,
-    });
-  });
-
   let updateOffset = function (isDesktop) {
     let navbar = u.$(
       isDesktop ? ".navbar-desktop [uk-navbar]" : ".navbar-mobile [uk-navbar]",
@@ -54,4 +42,18 @@ function configureAnchorScroll() {
 
   updateOffset(isDesktop.matches);
   isDesktop.addEventListener("change", ({ matches }) => updateOffset(matches));
+
+  u.on(anchors, "click", (e) => {
+    e.preventDefault();
+
+    let attr = u.attr(e.currentTarget, "href");
+
+    let targetElement = u.$(attr);
+
+    lenis.scrollTo(targetElement ?? 0, {
+      offset:
+        -navbarPosition.top -
+        navbarPosition.height * (isDesktop.matches ? 2 : 1),
+    });
+  });
 }
