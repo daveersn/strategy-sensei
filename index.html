@@ -31,7 +31,7 @@
   <body>
     <div class="header">
       <div
-        class="navbar-desktop uk-flex uk-flex-center"
+        class="navbar-desktop uk-flex uk-flex-center uk-visible@m"
         uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; offset: 20;"
       >
         <nav class="uk-navbar-container uk-flex-1" uk-navbar>
@@ -78,15 +78,10 @@
                 src="/img/bulb.png"
                 alt=""
                 width="90"
-                style="margin-top: -2rem"
+                class="bulb uk-visible@m"
               />
               digitali su misura per il tuo successo
-              <img
-                src="/img/rocket.png"
-                alt=""
-                width="90"
-                style="margin-right: -5rem"
-              />
+              <img src="/img/rocket.png" alt="" width="90" class="rocket" />
             </h1>
             <p class="uk-text-large">
               Ottieni risultati concreti con soluzioni digitali efficaci.
@@ -115,7 +110,7 @@
         <div class="uk-grid-column-medium" uk-grid>
           <div class="uk-width-2-5@m">
             <div
-              class="uk-width-1-1 uk-height-1-1 uk-position-relative uk-border-rounded uk-overflow-hidden"
+              class="uk-width-1-1 uk-height-1-1 uk-position-relative uk-border-rounded uk-overflow-hidden profile-image-column"
             >
               <img
                 class="uk-border-rounded"
@@ -129,7 +124,9 @@
           <div class="uk-width-3-5@m">
             <div class="uk-tile uk-tile-default uk-border-rounded">
               <h2 class="uk-width-large">
-                Piacere, sono <span class="uk-text-primary">Dar’ya Byzina</span>
+                Piacere, sono <br /><span class="uk-text-primary"
+                  >Dar’ya Byzina</span
+                >
               </h2>
               <p class="uk-width-large">
                 Sono una <b>digital marketing expert</b>, appassionata di
@@ -180,7 +177,7 @@
           </h2>
         </div>
         <div
-          class="uk-margin-xlarge-top uk-child-width-1-4@m uk-grid-medium"
+          class="uk-margin-xlarge-top uk-child-width-1-2 uk-child-width-1-4@m uk-grid-medium services-grid"
           uk-grid
           uk-scrollspy="target: .uk-card; cls: uk-animation-slide-bottom-small; delay: 250"
         >
