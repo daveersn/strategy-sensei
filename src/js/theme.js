@@ -33,11 +33,13 @@ function configureAnchorScroll() {
   let navbarPosition = null;
 
   let updateOffset = function (isDesktop) {
-    let navbar = u.$(
+    navbarPosition = navbar(isDesktop).getBoundingClientRect();
+  };
+
+  let navbar = function (isDesktop) {
+    return u.$(
       isDesktop ? ".navbar-desktop [uk-navbar]" : ".navbar-mobile [uk-navbar]",
     );
-
-    navbarPosition = navbar.getBoundingClientRect();
   };
 
   updateOffset(isDesktop.matches);
@@ -54,6 +56,25 @@ function configureAnchorScroll() {
       offset:
         -navbarPosition.top -
         navbarPosition.height * (isDesktop.matches ? 2 : 1),
+      onStart: () => {
+        if (isDesktop.matches) {
+          return;
+        }
+
+        let dropdown = u.$(".uk-dropbar", navbar(false));
+
+        if (!dropdown) {
+          return;
+        }
+
+        dropdown = UIkit.drop(dropdown);
+
+        if (!dropdown.isActive()) {
+          return;
+        }
+
+        dropdown.hide(0);
+      },
     });
   });
 }
