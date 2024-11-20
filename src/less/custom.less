@@ -289,6 +289,7 @@
       .bulb {
         width: 5rem;
         margin-top: -1rem;
+        margin-right: -3rem;
       }
 
       .rocket {
@@ -370,10 +371,62 @@
     background: rgba(255, 255, 255, 1);
 
   }
+
+  .reviews-slider {
+    .navigation-container {
+      margin-top: 4.8rem;
+
+      > * {
+        width: 100%;
+
+        > .uk-grid {
+          justify-content: space-around;
+        }
+
+      }
+
+      .slider-navigation {
+        width: 14rem;
+        height: 4rem;
+
+        > *.previous-item {
+          left: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        > *.next-item {
+          left: 100%;
+          top: 50%;
+          transform: translate(-100%, -50%);
+        }
+      }
+    }
+  }
+
+  #footer {
+    .links-column .uk-panel > *:not(:first-child) {
+      margin-top: 3.2rem!important;
+    }
+  }
 }
 
 @media screen and (max-width: 639px) {
   html {
     font-size: 8px;
+  }
+
+  .service-tile {
+    &.web-agency-selection-tile {
+      .icon-column + * {
+        width: 80%;
+      }
+    }
+
+    &.digital-adv-sem-tile {
+      .icon-column + * {
+        width: 82%;
+      }
+    }
   }
 }
