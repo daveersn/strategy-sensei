@@ -31,7 +31,7 @@
   <body>
     <div class="header">
       <div
-        class="navbar-desktop uk-flex uk-flex-center"
+        class="navbar-desktop uk-flex uk-flex-center uk-visible@m"
         uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; offset: 20;"
       >
         <nav class="uk-navbar-container uk-flex-1" uk-navbar>
@@ -61,6 +61,44 @@
           </div>
         </nav>
       </div>
+
+      <div
+        class="navbar-mobile uk-flex uk-flex-center uk-hidden@m"
+        uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; offset: 10;"
+      >
+        <nav class="uk-navbar-container uk-flex-1" uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="#"
+              ><img src="/img/logo/logo.svg" width="80" alt="Strategy Sensei"
+            /></a>
+          </div>
+          <div class="uk-navbar-right">
+            <a
+              class="uk-navbar-toggle uk-navbar-toggle-animate"
+              uk-navbar-toggle-icon
+              href=""
+            ></a>
+            <div
+              class="uk-dropbar uk-dropbar-top"
+              uk-drop="animation: slide-top; animate-out: true; duration: 370"
+            >
+              <ul class="uk-nav uk-nav-center">
+                <li><a href="#chi-sono">Chi sono</a></li>
+                <li><a href="#analisi-e-strategia">Analisi & Strategia</a></li>
+                <li>
+                  <a href="#digital-advertising-e-sem"
+                    >Digital Advertising & SEM
+                  </a>
+                </li>
+                <li>
+                  <a href="#web-agency-selection">Web Agency Selection</a>
+                </li>
+                <li><a href="#per-agenzie">Per agenzie</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <div class="uk-section-xsmall uk-padding-remove-top"></div>
@@ -78,15 +116,16 @@
                 src="/img/bulb.png"
                 alt=""
                 width="90"
-                style="margin-top: -2rem"
+                class="bulb uk-visible@m"
               />
-              digitali su misura per il tuo successo
-              <img
-                src="/img/rocket.png"
+              digitali<img
+                src="/img/bulb.png"
                 alt=""
                 width="90"
-                style="margin-right: -5rem"
+                class="bulb uk-hidden@m"
               />
+              su misura per il tuo successo
+              <img src="/img/rocket.png" alt="" width="90" class="rocket" />
             </h1>
             <p class="uk-text-large">
               Ottieni risultati concreti con soluzioni digitali efficaci.
@@ -115,7 +154,7 @@
         <div class="uk-grid-column-medium" uk-grid>
           <div class="uk-width-2-5@m">
             <div
-              class="uk-width-1-1 uk-height-1-1 uk-position-relative uk-border-rounded uk-overflow-hidden"
+              class="uk-width-1-1 uk-height-1-1 uk-position-relative uk-border-rounded uk-overflow-hidden profile-image-column"
             >
               <img
                 class="uk-border-rounded"
@@ -129,7 +168,9 @@
           <div class="uk-width-3-5@m">
             <div class="uk-tile uk-tile-default uk-border-rounded">
               <h2 class="uk-width-large">
-                Piacere, sono <span class="uk-text-primary">Dar’ya Byzina</span>
+                Piacere, sono <br /><span class="uk-text-primary"
+                  >Dar’ya Byzina</span
+                >
               </h2>
               <p class="uk-width-large">
                 Sono una <b>digital marketing expert</b>, appassionata di
@@ -180,7 +221,7 @@
           </h2>
         </div>
         <div
-          class="uk-margin-xlarge-top uk-child-width-1-4@m uk-grid-medium"
+          class="uk-margin-xlarge-top uk-child-width-1-2 uk-child-width-1-4@m uk-grid-medium services-grid"
           uk-grid
           uk-scrollspy="target: .uk-card; cls: uk-animation-slide-bottom-small; delay: 250"
         >
@@ -318,8 +359,8 @@
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
               <div class="uk-panel">
-                <div class="uk-grid-small uk-margin" uk-grid>
-                  <div class="uk-flex uk-flex-middle">
+                <div class="uk-grid-small uk-flex-nowrap uk-margin" uk-grid>
+                  <div class="uk-flex uk-flex-middle icon-column">
                     <img
                       class="uk-preserve"
                       src="/img/analisi_strategia.svg"
@@ -362,8 +403,8 @@
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
               <div class="uk-panel">
-                <div class="uk-grid-small uk-margin" uk-grid>
-                  <div class="uk-flex uk-flex-middle">
+                <div class="uk-grid-small uk-flex-nowrap uk-margin" uk-grid>
+                  <div class="uk-flex uk-flex-middle icon-column">
                     <img
                       class="uk-preserve"
                       src="/img/digital_adv.svg"
@@ -405,8 +446,8 @@
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
               <div class="uk-panel">
-                <div class="uk-grid-small uk-margin" uk-grid>
-                  <div class="uk-flex uk-flex-middle">
+                <div class="uk-grid-small uk-flex-nowrap uk-margin" uk-grid>
+                  <div class="uk-flex uk-flex-middle icon-column">
                     <img
                       class="uk-preserve"
                       src="/img/web_agency_selection.svg"
@@ -449,8 +490,8 @@
           <div class="uk-grid-small" uk-grid>
             <div class="uk-width-3-5@m uk-flex uk-flex-middle">
               <div class="uk-panel">
-                <div class="uk-grid-small uk-margin" uk-grid>
-                  <div class="uk-flex uk-flex-middle">
+                <div class="uk-grid-small uk-flex-nowrap uk-margin" uk-grid>
+                  <div class="uk-flex uk-flex-middle icon-column">
                     <img
                       class="uk-preserve"
                       src="/img/per_le_agenzie.svg"
@@ -555,29 +596,33 @@
                 </div>
               </div>
             </div>
-            <div class="uk-width-1-3@m uk-flex uk-flex-middle uk-flex-right">
-              <div class="uk-grid-small" uk-grid>
-                <div class="uk-flex uk-flex-middle">
-                  <a class="uk-display-block" uk-slider-item="previous"
-                    ><img
-                      src="/img/slider_previous.svg"
-                      alt="Recensione precedente"
-                  /></a>
-                </div>
-                <div>
-                  <div class="slider-navigation">
-                    <a uk-slider-item="0">1</a>
-                    <a uk-slider-item="1">2</a>
-                    <a uk-slider-item="2">3</a>
-                    <a uk-slider-item="3">4</a>
+            <div
+              class="uk-width-1-3@m uk-flex uk-flex-middle uk-flex-right navigation-container"
+            >
+              <div>
+                <div class="uk-grid-small" uk-grid>
+                  <div class="uk-flex uk-flex-middle">
+                    <a class="uk-display-block" uk-slider-item="previous"
+                      ><img
+                        src="/img/slider_previous.svg"
+                        alt="Recensione precedente"
+                    /></a>
                   </div>
-                </div>
-                <div class="uk-flex uk-flex-middle">
-                  <a class="uk-display-block" uk-slider-item="next"
-                    ><img
-                      src="/img/slider_next.svg"
-                      alt="Recensione successiva"
-                  /></a>
+                  <div>
+                    <div class="slider-navigation">
+                      <a uk-slider-item="0">1</a>
+                      <a uk-slider-item="1">2</a>
+                      <a uk-slider-item="2">3</a>
+                      <a uk-slider-item="3">4</a>
+                    </div>
+                  </div>
+                  <div class="uk-flex uk-flex-middle">
+                    <a class="uk-display-block" uk-slider-item="next"
+                      ><img
+                        src="/img/slider_next.svg"
+                        alt="Recensione successiva"
+                    /></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -647,47 +692,55 @@
       style="z-index: 2"
     >
       <div class="uk-section uk-section-primary" id="footer">
+        <div
+          class="uk-section uk-section-small uk-padding-remove-top uk-hidden@m"
+        ></div>
         <div class="uk-container">
           <div class="uk-grid-large" uk-grid>
-            <div class="uk-width-1-3@m">
+            <div class="uk-width-1-3@m uk-text-left@m uk-text-center">
               <img src="/img/logo/logo_inverse.svg" alt="Strategy Sensei" />
             </div>
             <div class="uk-width-2-3@m">
-              <div class="uk-child-width-1-3@m" uk-grid>
+              <div class="uk-child-width-1-3@m links-column" uk-grid>
                 <div class="uk-panel">
                   <a
-                    class="uk-margin-small uk-display-block"
+                    class="uk-margin-small uk-display-block uk-text-left@m uk-text-center"
                     href="#analisi-e-strategia"
                     >Analisi & Strategia</a
                   >
                   <a
-                    class="uk-margin-small uk-display-block"
+                    class="uk-margin-small uk-display-block uk-text-left@m uk-text-center"
                     href="#digital-advertising-e-sem"
                     >Digital Advertising & SEM</a
                   >
                   <a
-                    class="uk-margin-small uk-display-block"
+                    class="uk-margin-small uk-display-block uk-text-left@m uk-text-center"
                     href="#web-agency-selection"
                     >Web Agency Selection</a
                   >
                 </div>
                 <div class="uk-panel">
                   <a
-                    class="uk-margin-small uk-display-block"
+                    class="uk-margin-small uk-display-block uk-text-left@m uk-text-center"
                     href="#per-agenzie"
                     >Per agenzie</a
                   >
-                  <a class="uk-margin-small uk-display-block" href="#chi-sono"
+                  <a
+                    class="uk-margin-small uk-display-block uk-text-left@m uk-text-center"
+                    href="#chi-sono"
                     >Chi sono</a
                   >
                 </div>
                 <div class="uk-panel">
                   <a
-                    class="uk-margin-small uk-display-block"
+                    class="uk-margin-small uk-display-block uk-text-left@m uk-text-center"
                     href="mailto:darya@strategysensei.it"
                     >darya@strategysensei.it</a
                   >
-                  <div class="uk-margin-small" uk-grid>
+                  <div
+                    class="uk-margin-small uk-flex-left@m uk-flex-center"
+                    uk-grid
+                  >
                     <div>
                       <a href="#">
                         <img src="/img/instagram.svg" alt="Instagram" />

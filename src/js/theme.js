@@ -32,6 +32,19 @@ function configureAnchorScroll() {
   const isDesktop = window.matchMedia("(min-width: 960px)");
   let navbarPosition = null;
 
+  let updateOffset = function (isDesktop) {
+    navbarPosition = navbar(isDesktop).getBoundingClientRect();
+  };
+
+  let navbar = function (isDesktop) {
+    return u.$(
+      isDesktop ? ".navbar-desktop [uk-navbar]" : ".navbar-mobile [uk-navbar]",
+    );
+  };
+
+  updateOffset(isDesktop.matches);
+  isDesktop.addEventListener("change", ({ matches }) => updateOffset(matches));
+
   u.on(anchors, "click", (e) => {
     e.preventDefault();
 
@@ -40,18 +53,28 @@ function configureAnchorScroll() {
     let targetElement = u.$(attr);
 
     lenis.scrollTo(targetElement ?? 0, {
-      offset: -navbarPosition.top - navbarPosition.height * 2,
+      offset:
+        -navbarPosition.top -
+        navbarPosition.height * (isDesktop.matches ? 2 : 1),
+      onStart: () => {
+        if (isDesktop.matches) {
+          return;
+        }
+
+        let dropdown = u.$(".uk-dropbar", navbar(false));
+
+        if (!dropdown) {
+          return;
+        }
+
+        dropdown = UIkit.drop(dropdown);
+
+        if (!dropdown.isActive()) {
+          return;
+        }
+
+        dropdown.hide(0);
+      },
     });
   });
-
-  let updateOffset = function (isDesktop) {
-    let navbar = u.$(
-      isDesktop ? ".navbar-desktop [uk-navbar]" : ".navbar-mobile [uk-navbar]",
-    );
-
-    navbarPosition = navbar.getBoundingClientRect();
-  };
-
-  updateOffset(isDesktop.matches);
-  isDesktop.addEventListener("change", ({ matches }) => updateOffset(matches));
 }

@@ -2,6 +2,13 @@
   h1 {
     max-width: 122rem;
 
+    .bulb {
+      margin-top: -2rem;
+    }
+
+    .rocket {
+      margin-right: -5rem;
+    }
   }
 
   .dot {
@@ -269,5 +276,157 @@
 @media screen and (min-width: 1920px) {
   html {
     font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  html {
+    font-size: 9px;
+  }
+
+  .hero-section {
+    h1 {
+      .bulb {
+        width: 5rem;
+        margin-top: -1rem;
+        margin-right: -3rem;
+      }
+
+      .rocket {
+        width: 5rem;
+      }
+    }
+  }
+
+  .profile-image-column {
+    min-height: 45rem;
+
+    img {
+      object-position: 100% 17% !important;
+    }
+  }
+
+  #servizi-offerti {
+    .uk-card {
+      min-height: 35rem;
+
+      .uk-card-body {
+        padding: 1.6rem;
+      }
+
+      h4 {
+        font-size: 2.3rem;
+      }
+    }
+
+    .services-grid {
+      margin-left: -1.6rem;
+
+      > * {
+        padding-left: 1.6rem;
+      }
+    }
+  }
+
+  .service-tile {
+    .uk-panel {
+      padding: 4.8rem 3.2rem;
+    }
+
+    .image-container img {
+      display: block;
+      margin: auto;
+      width: 75%;
+    }
+  }
+
+  .web-agency-selection-tile .image-container {
+    margin-left: 0;
+  }
+
+  .digital-adv-sem-tile .image-container, .per-le-agenzie-tile .image-container {
+    padding-top: 0;
+  }
+
+  .uk-navbar-container {
+    margin: 0 1.6rem;
+  }
+
+  .uk-navbar-container {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05) !important;
+    border: 0.1rem solid rgba(0,0,0,.08);
+  }
+
+  .uk-navbar-toggle+.uk-dropbar {
+    width: 100%;
+    max-width: calc(100% - 3.2rem);
+    left: 0!important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 1.6rem 1.6rem;
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .uk-navbar-container:has(.uk-dropbar.uk-open) {
+    border-radius: 1.6rem 1.6rem 0 0;
+    background: rgba(255, 255, 255, 1);
+
+  }
+
+  .reviews-slider {
+    .navigation-container {
+      margin-top: 4.8rem;
+
+      > * {
+        width: 100%;
+
+        > .uk-grid {
+          justify-content: space-around;
+        }
+
+      }
+
+      .slider-navigation {
+        width: 14rem;
+        height: 4rem;
+
+        > *.previous-item {
+          left: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        > *.next-item {
+          left: 100%;
+          top: 50%;
+          transform: translate(-100%, -50%);
+        }
+      }
+    }
+  }
+
+  #footer {
+    .links-column .uk-panel > *:not(:first-child) {
+      margin-top: 3.2rem!important;
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  html {
+    font-size: 8px;
+  }
+
+  .service-tile {
+    &.web-agency-selection-tile {
+      .icon-column + * {
+        width: 80%;
+      }
+    }
+
+    &.digital-adv-sem-tile {
+      .icon-column + * {
+        width: 82%;
+      }
+    }
   }
 }
