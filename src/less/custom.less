@@ -11,6 +11,10 @@
     }
   }
 
+  .height-70vh {
+    min-height: max(0px, 70vh);
+  }
+
   .dot {
     width: 0.5rem;
     height: 0.5rem;
@@ -26,6 +30,28 @@
       text-decoration: none;
       font-weight: 600;
     }
+  }
+}
+
+.scroll-icon .down-arrow {
+  animation: scroll-down infinite 2s;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+  50.1% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
   }
 }
 
@@ -285,16 +311,25 @@
     letter-spacing: 0.03rem;
   }
 
+  .uk-text-lead {
+    font-size: 2.2rem;
+  }
+
   .hero-section {
     h1 {
-      .bulb {
-        width: 5rem;
-        margin-top: -1rem;
-        margin-right: -3rem;
-      }
-
       .rocket {
         width: 5rem;
+      }
+    }
+
+    .height-70vh {
+      min-height: max(0px, 55vh);
+    }
+
+    .uk-button {
+      background-color: @text-primary-color;
+      &:hover {
+        background-color: darken(@button-primary-background, 20%);
       }
     }
   }
@@ -309,23 +344,18 @@
 
   #servizi-offerti {
     .uk-card {
-      min-height: 35rem;
-
-      .uk-card-body {
-        padding: 1.6rem;
-      }
+      min-height: 0rem;
+      text-align: center;
+      max-width: 85%;
+      margin: auto;
 
       h4 {
-        font-size: 2.3rem;
+        margin-top: 6.4rem;
       }
     }
 
     .services-grid {
-      margin-left: -1.6rem;
-
-      > * {
-        padding-left: 1.6rem;
-      }
+      margin-top: 6.4rem!important;
     }
   }
 
@@ -409,6 +439,11 @@
     .links-column .uk-panel > *:not(:first-child) {
       margin-top: 3.2rem!important;
     }
+  }
+
+  .social-grid a {
+    width: 5rem;
+    height: 5rem;
   }
 }
 
